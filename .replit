@@ -1,0 +1,9 @@
+
+modules = ["swift"]
+run = "run 012.swift"
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "run 012.swift"]
