@@ -1,3 +1,5 @@
+// Binary Search
+
 func binarySearch(arr: [Int], key: Int) -> Int {
   var start = 0
   var end = arr.count - 1
@@ -17,12 +19,13 @@ func binarySearch(arr: [Int], key: Int) -> Int {
   return -1
 }
 
-// Example usage:
-let even = [2, 4, 6, 8]
+let even = [0, 2, 4, 6, 8]
 let odd = [1, 3, 5, 7, 9]
 
 let evenIndex = binarySearch(arr: even, key: 6)
 print("Index of 6 is \(evenIndex)")
 
 let oddIndex = binarySearch(arr: odd, key: 14)
-print("Index of 14 is \(oddIndex)")
+print("Index of 7 is \(oddIndex)")
+
+// end
