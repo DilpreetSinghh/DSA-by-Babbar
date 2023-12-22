@@ -1,5 +1,14 @@
 // Binary Search
 
+/* 
+- Elements should be in monotonic order
+find the middle element
+- if the middle element is higher than required element, find in lower section
+- if the middle element is lower than required element, find in upper section.
+*/
+
+
+
 func binarySearch(arr: [Int], key: Int) -> Int {
   var start = 0
   var end = arr.count - 1
