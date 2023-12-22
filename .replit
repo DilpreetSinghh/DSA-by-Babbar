@@ -1,5 +1,4 @@
-
-modules = ["swift"]
+modules = ["swift", "python-3.10:v25-20230920-d4ad2e4"]
 run = "run 012.swift"
 
 [nix]
