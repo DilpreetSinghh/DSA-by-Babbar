@@ -1,7 +1,8 @@
 #include<vector>
-#include<iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h> 
 using namespace std;
+
+
 int firstOcc(vector<int>& arr, int n, int key) {
 
     int s = 0, e = n-1;
@@ -48,10 +49,14 @@ int lastOcc(vector<int>& arr, int n, int key) {
     return ans;
 }
 
-pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k){
-  pair<int,int> p;
-  p.first = firstOcc(arr, n, k);
-  p.second = lastOcc(arr, n, k);
 
-  return p;
+
+pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
+{
+
+    pair<int,int> p;
+    p.first = firstOcc(arr, n, k);
+    p.second = lastOcc(arr, n, k);
+    return p;
+
 }
