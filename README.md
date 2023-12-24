@@ -12,7 +12,8 @@ RUN PYTHON FILE
 // python filename.py
 
 RUN C++ FILE
-// 
+// g++ filename.cpp
+// ./a.out
 
 
 

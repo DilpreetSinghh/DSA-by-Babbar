@@ -38,5 +38,8 @@ let oddIndex = binarySearch(arr: odd, key: 14)
 print("Index of 7 is \(oddIndex)")
 
 // end
+// complexity is O(log n)
+
 // swiftc 012.swift to make executable file
 // ./012 to run executable file
+
