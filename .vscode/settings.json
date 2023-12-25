@@ -4,5 +4,10 @@
         "strings": "off",
         "other": "off"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.default.customConfigurationVariables": {
+
+    },
+    "C_Cpp.configurationWarnings": "enabled",
+    "C_Cpp.default.configurationProvider": "${default}"
 }
