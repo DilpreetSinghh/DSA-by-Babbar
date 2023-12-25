@@ -10,6 +10,7 @@ RUN SWIFT FILE
 
 RUN PYTHON FILE
 // python filename.py
+// python3 filename.py (in vscode)
 
 RUN C++ FILE
 // g++ filename.cpp

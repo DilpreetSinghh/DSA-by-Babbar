@@ -1,8 +1,0 @@
-modules = ["swift", "python-3.10:v25-20230920-d4ad2e4"]
-run = "run 012.swift"
-
-[nix]
-channel = "stable-23_05"
-
-[deployment]
-run = ["sh", "-c", "run 012.swift"]
