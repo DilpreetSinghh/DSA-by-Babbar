@@ -26,3 +26,7 @@ int main() {
     cout << "Peak index in the array: " << peakIndex << endl;
     return 0;
 }
+
+// g++ -std=c++20 filename.cpp 
+// use above command where vector is in use
+// vscode

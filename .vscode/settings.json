@@ -5,5 +5,9 @@
 
     },
     "C_Cpp.configurationWarnings": "enabled",
-    "C_Cpp.default.configurationProvider": "${default}"
+    "C_Cpp.default.configurationProvider": "${default}",
+    "files.associations": {
+        "vector": "cpp",
+        "iosfwd": "cpp"
+    }
 }
