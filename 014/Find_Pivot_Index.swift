@@ -15,7 +15,13 @@ func pivotIndex(_ nums: [Int]) -> Int {
     }
     return -1
 }
-
-
 let nums = [1,7,3,6,5,6]
+print(pivotIndex(nums))
+
+
+// other method
+
+let pivot = nums.max()
+let pivotIndex = nums.firstIndex(of: pivot!)
+
 print(pivotIndex(nums))
