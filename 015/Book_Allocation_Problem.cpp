@@ -1,54 +1,60 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <__numeric/accumulate.h>
+#include<vector>
+#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Solution {
-public:
-    int splitArray(const std::vector<int>& array, int key) {
-        auto requiredSplit = [&](int largest) {
-            int currSum = 0;
-            int splitCount = 0;
-
-            for (int element : array) {
-                if (currSum + element <= largest) {
-                    currSum += element;
-                } else {
-                    currSum = element;
-                    splitCount += 1;
-                }
-            }
-            return splitCount + 1;
-        };
-
-        int left = *std::max_element(array.begin(), array.end());
-        int right = std::accumulate(array.begin(), array.end(), 0);
-        int answer = right;
-
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (requiredSplit(mid) <= key) {
-                answer = mid;
-                right = mid - 1;
-            } else {
-                left = mid + 1;
-            }
+bool isPossible(vector<int> arr, int n, int m, int mid) {
+    int studentCount = 1;
+    int pageSum = 0;
+    //cout << "checking for mid "<< mid <<endl;
+    
+    for(int i = 0; i<n; i++) {
+        if(pageSum + arr[i] <= mid) {
+            pageSum += arr[i];
         }
-        return answer;
-    }
-};
+        else{
+            studentCount++;
 
-int main() {
-    std::vector<int> arr;
-    int num;
-    while (std::cin >> num) {
-        arr.push_back(num);
+            if (studentCount > m || arr[i] > mid) {
+            return false;
+            }
+            pageSum = arr[i];
+        }
+        if(studentCount > m) {
+            return false;
+        }
+        //cout << " for i " << i << " Student "<< studentCount << " pageSum " << pageSum << endl;
     }
+    return true;
+}
 
-    int m;
-    std::cin >> m;
-    Solution ob;
-    std::cout << ob.splitArray(arr, m) << std::endl;
+int allocateBooks(vector<int> arr, int n, int m) {
+    int s = 0;
+    int sum = 0;
+    
+    for(int i = 0; i<n; i++) {
+        sum += arr[i];
+    }
+    int e = sum;
+    int ans = -1;
+    int mid = s + (e-s)/2;
+    
+    while(s<=e){
+        if(isPossible(arr,n,m,mid)){
+            //cout<<" Mid returned TRUE" << endl;
+            ans = mid;
+            e = mid - 1;
+        }
+        else{
+            s = mid + 1;
+        }
+        mid = s + (e-s)/2;
+    }
+    return ans;
+}
+
+int main(){
+    vector<int> arr = {9, 22, 37, 45, 51, 113};
+    cout<<"Pivot is "<< allocateBooks(arr, 6, 2) << endl;
     return 0;
 }
