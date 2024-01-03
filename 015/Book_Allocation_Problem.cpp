@@ -3,12 +3,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// n: total pages, m: no. of partitions
 bool isPossible(vector<int> arr, int n, int m, int mid) {
     int studentCount = 1;
     int pageSum = 0;
     //cout << "checking for mid "<< mid <<endl;
     
-    for(int i = 0; i<n; i++) {
+    for(int i = 0; i < n; i++) {
         if(pageSum + arr[i] <= mid) {
             pageSum += arr[i];
         }
@@ -29,26 +30,27 @@ bool isPossible(vector<int> arr, int n, int m, int mid) {
 }
 
 int allocateBooks(vector<int> arr, int n, int m) {
-    int s = 0;
+    int start = arr[0];
     int sum = 0;
     
     for(int i = 0; i<n; i++) {
         sum += arr[i];
     }
-    int e = sum;
+
+    int end = sum;
     int ans = -1;
-    int mid = s + (e-s)/2;
+    int mid = start + (end-start)/2;
     
-    while(s<=e){
+    while(start<=end){
         if(isPossible(arr,n,m,mid)){
             //cout<<" Mid returned TRUE" << endl;
             ans = mid;
-            e = mid - 1;
+            end = mid - 1;
         }
         else{
-            s = mid + 1;
+            start = mid + 1;
         }
-        mid = s + (e-s)/2;
+        mid = start + (end-start)/2;
     }
     return ans;
 }
