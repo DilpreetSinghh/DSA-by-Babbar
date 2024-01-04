@@ -12,13 +12,13 @@ class Solution:
         return False
 
     def solve(self, n, k, stalls):
-        stalls.sort()
-        low, high = 1, stalls[-1] - stalls[0]
+        sorted_stalls = sorted(stalls)
+        low, high = 1, sorted_stalls[-1] - sorted_stalls[0]
         res = 0
 
         while low <= high:
             mid = (low + high) // 2
-            if self.is_possible(stalls, mid, k):
+            if self.is_possible(stalls=sorted_stalls, min_dist=mid, k=k):
                 res = mid
                 low = mid + 1
             else:
@@ -26,25 +26,12 @@ class Solution:
         return res
 
 
-# Input handling
-t = int(input().strip())
+# Input
+t = 1
+n = 5
+k = 3
+stalls = [1, 2, 8, 4, 9]
 
-for _ in range(t):
-    n, k = map(int, input().strip().split())
-    stalls = list(map(int, input().strip().split()))
-
-    obj = Solution()
-    result = obj.solve(n, k, stalls)
-    print(result)
-
-
-'''
-example input
-    2         : t
-    5 3       : n ,k
-    1 2 8 4 9 : stalls
-
-example output
-    3
-
-'''
+solution = Solution()
+result = solution.solve(n=n, k=k, stalls=stalls)
+print(result)
