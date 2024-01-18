@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "017_Bubble_Sort/Bubble Sort.md",
+                "file": "018_Insertion_Sort/Insertion_Sort.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "017_Bubble_Sort/Bubble Sort.md",
+                "file": "018_Insertion_Sort/Insertion_Sort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "017_Bubble_Sort/Bubble Sort.md",
+                "file": "018_Insertion_Sort/Insertion_Sort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "017_Bubble_Sort/Bubble Sort.md"
+                "file": "018_Insertion_Sort/Insertion_Sort.md"
               }
             }
           }
@@ -148,11 +148,14 @@
   },
   "active": "c81d1dd82968a0a9",
   "lastOpenFiles": [
+    "018_Insertion_Sort/Insertion_Sort.swift",
+    "018_Insertion_Sort/Insertion_Sort.py",
+    "018_Insertion_Sort/Insertion_Sort.cpp",
+    "017_Bubble_Sort/Bubble Sort.md",
     "a.out",
     "Bubble_Sort",
     "017_Bubble_Sort/Bubble_Sort.swift",
     "017_Bubble_Sort/Bubble_Sort.py",
-    "README.md",
-    "017_Bubble_Sort/Bubble Sort.md"
+    "README.md"
   ]
 }
