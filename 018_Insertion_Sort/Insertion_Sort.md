@@ -7,7 +7,7 @@ To sort an array of size N in ascending order iterate over the array and compare
 
 Consider an example: `arr[]: `{12, 11, 13, 5, 6}
 
-|12|11|13|5|6|
+|12 |11|13|5|6|
 |---|---|---|---|---|
 
 **First Pass:**

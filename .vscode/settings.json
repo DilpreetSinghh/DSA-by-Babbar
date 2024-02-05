@@ -1,5 +1,9 @@
 {
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.customConfigurationVariables": {
 
